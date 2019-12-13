@@ -4,9 +4,6 @@ library(ggplot2)
 library(reshape2)
 library(ggmap)
 
-api <- 'AIzaSyB44EuO0Ax4u7ylZgvzExtynZ1_uIaOOXk'
-register_google(key = api)
-
 #### Read Data ####
 ZHVI0 <- read.csv(file = "City_Zhvi_AllHomes.csv")
 X0 <- ZHVI0[,-(1:6)]
@@ -38,37 +35,37 @@ dat1$county <- as.character(dat1$county)
 ## CA
 latlon_CA <- geocode(paste( dat1[dat1$state=="CA",]$region, ", CA", sep = ""), 
                          output = 'latlon')
-# save(latlon_CA, file = "latlon_CA.RData")
+# save(latlon_CA, file = "latlon/latlon_CA.RData")
 
 ## FL
 latlon_FL <- geocode(paste( dat1[dat1$state=="FL",]$region, ", FL", sep = ""), 
                      output = 'latlon')
-# save(latlon_FL, file = "latlon_FL.RData")
+# save(latlon_FL, file = "latlon/latlon_FL.RData")
 
 ## IA
 latlon_IA <- geocode(paste( dat1[dat1$state=="IA",]$region, ", IA", sep = ""), 
                      output = 'latlon')
-# save(latlon_IA, file = "latlon_IA.RData")
+# save(latlon_IA, file = "latlon/latlon_IA.RData")
 
 ## IL
 latlon_IL <- geocode(paste( dat1[dat1$state=="IL",]$region, ", IL", sep = ""), 
                      output = 'latlon')
-# save(latlon_IL, file = "latlon_IL.RData")
+# save(latlon_IL, file = "latlon/latlon_IL.RData")
 
 ## NY
 latlon_NY <- geocode(paste( dat1[dat1$state=="NY",]$region, ", NY", sep = ""), 
                      output = 'latlon')
-# save(latlon_NY, file = "latlon_NY.RData")
+# save(latlon_NY, file = "latlon/latlon_NY.RData")
 
 ## TX
 latlon_TX <- geocode(paste( dat1[dat1$state=="TX",]$region, ", TX", sep = ""), 
                      output = 'latlon')
-# save(latlon_TX, file = "latlon_TX.RData")
+# save(latlon_TX, file = "latlon/latlon_TX.RData")
 
 ## WA
 latlon_WA <- geocode(paste( dat1[dat1$state=="WA",]$region, ", WA", sep = ""), 
                      output = 'latlon')
-# save(latlon_WA, file = "latlon_WA.RData")
+# save(latlon_WA, file = "latlon/latlon_WA.RData")
 
 
 
